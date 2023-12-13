@@ -9,11 +9,15 @@
 }
 
 body {
-  background: linear-gradient(to bottom, #343163 25%, #221f3d 90%);
+  background: linear-gradient(to bottom, #343163 60%, #221f3d 90%);
 
   height: 100vh;
 }
 
 label {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.rotate-34 {
+  rotate: 34deg;
 }
