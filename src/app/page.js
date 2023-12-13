@@ -1,4 +1,4 @@
-export default function Weather() {
+export default function Home() {
     return (
         <>
         </>

@@ -9,24 +9,31 @@ import { useEffect, useState } from 'react'
 
 import Link from 'next/link'
 
-export default function Home() {
+export default function WeatherList() {
   const [weather, setWeather] = useState([])
+
+  const mathEquation = (300 - 32) / 5
 
   useEffect(() => {
     async function getData() {
-      const res = await fetch('http://api.weatherapi.com/v1/current.json?key=549c436c54b84d7c844115022231312&q=London&aqi=no')
+      const lon = Math.floor(Math.random() * 100)
+      const lat = Math.floor(Math.random() * 100)
+      const apiKey = '9c084fb2105a8455487eb0840db99b00'
+      const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`)
       const data = await res.json()
 
-      setWeather(data.results)
+      weather.push(...weather, data)
     }
-  })
+
+    getData()
+  }, [])
 
   return (
     <>
       <header className='flex flex-col'>
         <nav className='flex w-1/2 gap-3 m-5 align-baseline'>
-          <Link href='/'>
-            <FontAwesomeIcon className='text-white self-center' icon={faChevronLeft} height={20} />
+          <Link className='self-center' href='/'>
+            <FontAwesomeIcon className='text-white' icon={faChevronLeft} height={20} />
           </Link>
           <h1 className='text-4xl text-white'>Weather</h1>
         </nav>
@@ -36,10 +43,12 @@ export default function Home() {
         </label>
       </header>
       <main>
-        {/* Replace params with api data */}
-        <Weather degree='5' h='15' l='22' type='heavy rain' city='london' country='england'/> 
-        <Weather degree='-1' h='25' l='72' type='cloudy' city='roskilde' country='denmark'/> 
-        <Weather degree='50' h='55' l='59' type='sunny' city='cape town' country='africa'/> 
+        {/* Replace params with api data <Weather degree={weather.main && weather.main.temp} type={weather.weather && weather.weather[0].description} city='fix' country='fix'/>*/}
+        {weather.map(forecast => forecast.cod == 200 &&  <Weather 
+                                                          degree={forecast.main && Math.round(forecast.main.temp - 273.15)} 
+                                                          type={forecast.weather && forecast.weather[0].description} 
+                                                          city='fix'
+                                                          country='fix'/>)}
       </main>
     </>
   )
