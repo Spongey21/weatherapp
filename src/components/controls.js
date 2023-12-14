@@ -2,16 +2,12 @@ import Image from 'next/image'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import House from '/public/House.svg'
-import Background from '/public/Stars.svg'
 import ButtonBackground from '/public/Subtract.svg'
 import IconBackground from '/public/Rectangle 364.svg'
 
 export default function Controls({ leftIcon, rightIcon, btnIcon }) {
     return (
         <>
-            <Image className='fixed top-[30%]' src={House} alt='house image'/>
-            <Image className='-z-50' src={Background} alt='page background'/>
             <Image className='fixed bottom-0 left-[50%] translate-x-[-50%] z-10' src={ButtonBackground} alt='button background'/>
             <Image className='fixed bottom-0' src={IconBackground} alt='icon background'/>
             <FontAwesomeIcon className='text-purple-800 bg-white fixed bottom-[2.5%] left-[50%] translate-x-[-50%] rounded-full text-3xl p-5 z-10' icon={btnIcon} />
