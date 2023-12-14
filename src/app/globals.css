@@ -10,8 +10,6 @@
 
 body {
   background: linear-gradient(to bottom, #343163 60%, #221f3d 90%);
-
-  height: 100vh;
 }
 
 label {

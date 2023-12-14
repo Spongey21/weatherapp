@@ -5,29 +5,9 @@ import { faChevronLeft, faSearch } from '@fortawesome/free-solid-svg-icons'
 
 import Weather from '@/components/weather'
 
-import { useEffect, useState } from 'react'
-
 import Link from 'next/link'
 
 export default function WeatherList() {
-  const [weather, setWeather] = useState([])
-
-  const mathEquation = (300 - 32) / 5
-
-  useEffect(() => {
-    async function getData() {
-      const lon = Math.floor(Math.random() * 100)
-      const lat = Math.floor(Math.random() * 100)
-      const apiKey = '9c084fb2105a8455487eb0840db99b00'
-      const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`)
-      const data = await res.json()
-
-      weather.push(...weather, data)
-    }
-
-    getData()
-  }, [])
-
   return (
     <>
       <header className='flex flex-col'>
@@ -44,11 +24,12 @@ export default function WeatherList() {
       </header>
       <main>
         {/* Replace params with api data <Weather degree={weather.main && weather.main.temp} type={weather.weather && weather.weather[0].description} city='fix' country='fix'/>*/}
-        {weather.map(forecast => forecast.cod == 200 &&  <Weather 
-                                                          degree={forecast.main && Math.round(forecast.main.temp - 273.15)} 
-                                                          type={forecast.weather && forecast.weather[0].description} 
-                                                          city='fix'
-                                                          country='fix'/>)}
+        <Weather lat={55} lon={12}/>
+        <Weather lat={55} lon={13}/>
+        <Weather lat={55} lon={14}/>
+        <Weather lat={55} lon={15}/>
+        <Weather lat={55} lon={16}/>
+        <Weather lat={55} lon={17}/>
       </main>
     </>
   )
