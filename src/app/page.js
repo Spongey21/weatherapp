@@ -1,9 +1,14 @@
 "use client"
 
+import Controls from '@/components/controls'
+import Clock from '@/components/clock'
+import { faPlus, faLocationDot, faList } from '@fortawesome/free-solid-svg-icons'
+
 export default function Home() {
     return (
-        <main className="bg-house">
-            <h1>Hello</h1>
+        <main>
+            <Clock/>
+            <Controls leftIcon={faLocationDot} rightIcon={faList} btnIcon={faPlus}/>
         </main>
     )
 }
