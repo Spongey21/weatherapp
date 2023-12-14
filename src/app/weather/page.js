@@ -17,9 +17,9 @@ export default function WeatherList() {
           </Link>
           <h1 className='text-4xl text-white'>Weather</h1>
         </nav>
-        <label className='flex align-middle gap-2 w-11/12 m-auto p-1.5 rounded-lg'>
-          <FontAwesomeIcon className='text-gray-400' icon={faSearch} height={20} />
-          <input className='w-10/12 outline-none bg-transparent text-gray-400' type="text" placeholder='Search for a city or airport' />
+        <label className='flex gap-2 w-11/12 m-auto p-1.5 rounded-lg'>
+          <FontAwesomeIcon className='text-gray-400 self-center text-lg' icon={faSearch} height={20} />
+          <input className='w-10/12 outline-none bg-transparent text-gray-400 placeholder:text-lg' type="text" placeholder='Search for a city or airport' />
         </label>
       </header>
       <main>
