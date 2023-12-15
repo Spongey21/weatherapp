@@ -12,8 +12,6 @@ export default function clock() {
         });
     }, [])
 
-    console.log(location);
-
     return (
         <article className="flex flex-col justify-center text-center fixed top-[10%] left-[50%] translate-x-[-50%]">
             <h1 className="text-white text-4xl">{!location.name ? location.name = 'unknown' : location.name}</h1>
