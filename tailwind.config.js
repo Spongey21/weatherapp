@@ -7,9 +7,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'house': "url('/house.svg')",
-      }
     },
   },
   plugins: [],

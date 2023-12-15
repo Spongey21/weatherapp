@@ -15,7 +15,7 @@ export default function Home() {
         <main>
             <Clock />
             <Controls leftIcon={faLocationDot} rightIcon={faList} btnIcon={faPlus} />
-            <Image className='fixed top-[35%]' src={House} alt='house image'/>
+            <Image className='fixed top-[37.5%] left-[50%] translate-x-[-50%]' src={House} alt='house image'/>
             <Image src={Background} alt='page background'/>
         </main>
     )
