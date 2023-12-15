@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'weatherBackground': "url('/WeatherBackground.svg')",
+      }
     },
   },
   plugins: [],
