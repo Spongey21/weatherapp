@@ -23,7 +23,6 @@ export default function WeatherList() {
         </label>
       </header>
       <main>
-        {/* Replace params with api data <Weather degree={weather.main && weather.main.temp} type={weather.weather && weather.weather[0].description} city='fix' country='fix'/>*/}
         <Weather lat={55} lon={12}/>
         <Weather lat={55} lon={13}/>
         <Weather lat={55} lon={14}/>
