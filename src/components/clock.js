@@ -14,7 +14,7 @@ export default function clock() {
     }, [])
 
     return (
-        <article className="flex flex-col justify-center text-center fixed top-[7.5%] left-[50%] translate-x-[-50%]">
+        <article className="flex flex-col justify-center text-center fixed top-[5%] left-[50%] translate-x-[-50%]">
             <h1 className="text-white text-3xl capitalize">{!location.name ? location.name = 'unknown' : location.name}</h1>
             <h2 className="text-white text-7xl">{location.main && Math.round(location.main.temp - 274.15)}°</h2>
             <span className="text-gray-400 capitalize">{location.weather && location.weather[0].description}</span>

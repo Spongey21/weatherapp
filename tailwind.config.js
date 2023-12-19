@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'cool': '#2E335A',
+      },
       backgroundImage: {
         'weatherBackground': "url('/WeatherBackground.svg')",
       }
