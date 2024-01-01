@@ -10,7 +10,7 @@ export default function Forecast() {
                 <span className="mb-auto bg-[rgba(0,0,0,0.3)] h-1 w-[40px] rounded-full mt-1"></span>
                 <span className="text-center text-base capitalize text-[#EBEBF599] whitespace-nowrap">weekly forecast</span>
             </div>
-            <div className="w-[390px] h-[3px] bg-blend-overlay bg-gradient-to-br from-[rgba(0,0,0,0.3)] to-[rgba(255,255,255,0.3)]"></div>
+            <div className="w-full h-[3px] bg-blend-overlay bg-gradient-to-br from-[rgba(0,0,0,0.3)] to-[rgba(255,255,255,0.3)]"></div>
             <article className="my-2 h-2/4 flex justify-start items-center pl-[16px] gap-[12px] overflow-hidden">
                 <WeatherCapsule />
                 <WeatherCapsule />
