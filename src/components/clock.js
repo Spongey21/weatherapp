@@ -8,9 +8,8 @@ export default function clock() {
 
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(async (position) => {
-            setLocation(await GetLocation(position.coords.latitude, position.coords.longitude))
+            setLocation(await GetLocation(position.coords.latitude, position.coords.longitude, `https://api.openweathermap.org/data/2.5/weather`))
         });
-
     }, [])
 
     return (

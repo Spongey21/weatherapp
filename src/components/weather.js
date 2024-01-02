@@ -13,7 +13,7 @@ export default function Weather({ lat, lon }) {
 
   useEffect(() => {
     async function setData() {
-      setWeather(await GetLocation(lat, lon))
+      setWeather(await GetLocation(lat, lon, 'https://api.openweathermap.org/data/2.5/weather'))
     }
     setData()
   }, [])
