@@ -15,7 +15,7 @@ export default function Home() {
     return (
         <main>
             <Image className='fixed top-[26%] left-[50%] translate-x-[-50%]' src={House} alt='house image' />
-            <Image src={Background} alt='page background' />
+            <Image className='w-full' src={Background} alt='page background' />
             <Clock />
             <Controls leftIcon={faLocationDot} rightIcon={faList} btnIcon={faPlus} />
             <Forecast />
